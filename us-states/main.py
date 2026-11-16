@@ -1,7 +1,7 @@
 import turtle
 import pandas
 
-data = pandas.read_csv("50_states.csv")
+data = pandas.read_csv("./us-states/50_states.csv")
 screen = turtle.Screen()
 screen.title("U.S. States Game")
 image = "blank_states_img.gif"
@@ -24,7 +24,7 @@ while len(guessed_states) < 50:
             if state not in guessed_states:
                 missing_states.append(state)
         new_data = pandas.DataFrame(missing_states)
-        new_data.to_csv("states_to_learn.csv")
+        new_data.to_csv("./us-states/states_to_learn.csv")
         break
         
     if answer in states_list:
