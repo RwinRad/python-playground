@@ -32,9 +32,9 @@ class Scoreboard(Turtle):
         self.update_scoreboard()
 
     def read_file(self):
-        with open("data.txt") as file:
+        with open("./snake-v3/data.txt") as file:
             self.high_score = int(file.read())
 
     def write_file(self):
-        with open("data.txt", mode="w") as file:
+        with open("./snake-v3/data.txt", mode="w") as file:
             file.write(f"{self.high_score}")
